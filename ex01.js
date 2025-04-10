@@ -5,7 +5,8 @@
 let nome = "Ana Paula";
 let idade = 16;
 
-console.log("Olá meu nome é", nome ,"e eu tenho" ,idade);
+console.log("Olá meu nome é " + nome + " e eu tenho  " + idade); //(concatenação)
+console.log(`Olá meu nome é ${nome} e eu tenho ${idade}`); //(Interpolação)
 
 //Declare uma string e utilize métodos para converter para maiúsculas e
 //minúsculas.
@@ -20,14 +21,14 @@ console.log(upper)
 
 //Declare uma variável e verifique se o tipo dela é number
 
-let text = (typeof num)
+let text = (typeof idade)
 console.log(text)
-let numero = (typeof int)
+let numero = (typeof nome)
 console.log(numero)
 
 //Calcule o Índice de Massa Corporal (IMC) utilizando variáveis para altura e
 //peso.
-let peso = 49
-let altura = 1.60
-let imc = peso / (altura * altura)
-console.log(imc)
+let peso = 49;
+let altura = 1.60;
+let imc = (peso / (altura * altura)).toFixed(2);
+console.log(`O seu IMC é: ${imc}`);
