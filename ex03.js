@@ -1,3 +1,7 @@
+import entradaDados from 'readline-sync';
+let nome = entradaDados.question("informe seu nome:");
+console.log(`Olá, ${nome}!`);
+
 //01
 
 let Apartamento = {
@@ -11,29 +15,33 @@ console.log(`${Apartamento.tipo} com ${Apartamento.quartos} quartos, localizado 
 
 //02
 
-var produtoEmbalado = {
+let produtoEmbalado = {
 nome: "Laptop HP",
 categoria: "Eletrônicos",
 peso: 1.5,
 preco: 3500.00
 }
 
-console.log('O produto embalado',produtoEmbalado.nome,'da categoria', produtoEmbalado.categoria, 'pesando', produtoEmbalado.peso,'kg, esta a venda por R$', produtoEmbalado.preco)
+console.log('O produto embalado',produtoEmbalado.nome,'da categoria', produtoEmbalado.categoria, 'pesando', produtoEmbalado.peso,'kg, esta a venda por R$', (produtoEmbalado.preco.toLocaleString('pt-BR',{style:'currency',currency: 'BRL'
+})))
 
 //3
 class Imovel {
 constructor(quartos, tipo, endereco) {
 this.quartos = quartos,
 this.tipo = tipo,
-this.endereco = endereco};
+this.endereco = endereco}};
 
-exibirInformacoes() {
-return `${this.tipo} com ${this.quartos} quartos, localizada no endereço ${this.endereco}.`;
-}
-}
+// exibirInformacoes() {
+// return `${this.tipo} com ${this.quartos} quartos, localizada no endereço ${this.endereco}.`;
+// }
+// }
 
-let casa = new Imovel(4, "Casa", "Rua da Amizade, 789 - Bairro Alegre");
-console.log(casa.exibirInformacoes());
+let casa = new Imovel//(4, "Casa", "Rua da Amizade, 789 - Bairro Alegre");
+casa.quartos = 2;
+casa.tipo = 'Sobrado'
+casa.endereco = 'Centro'
+console.log(`Qartos: $`);
 
 let apartamento = new Imovel(2, "Apartamento", "Avenida da Paz, 123 - Centro");
 console.log(apartamento.exibirInformacoes());
